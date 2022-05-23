@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:my_jam/widgets/appbar/app_bar_widget.dart';
 
+import 'components/tree_component.dart';
+
 class TreePage extends StatelessWidget {
   const TreePage({Key? key}) : super(key: key);
   @override
@@ -10,7 +12,11 @@ class TreePage extends StatelessWidget {
         title: 'Tree',
       ),
       body: SingleChildScrollView(
-        child: Container(color: Colors.black,)
+        child: Column(
+          children: const [
+            TreeComponent(),
+          ],
+        ),
       ),
     );
   }

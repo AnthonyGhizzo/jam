@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_jam/pages/home/components/home_component.dart';
 import 'package:my_jam/widgets/appbar/app_bar_widget.dart';
 
 class HomePage extends StatelessWidget {
@@ -6,12 +7,12 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const MyAppBar(
-        title: 'Home',
-      ),
-      body: SingleChildScrollView(
-        child: Container(color: Colors.black,)
-      ),
-    );
+        appBar: const MyAppBar(
+          title: 'Home',
+        ),
+        body: SingleChildScrollView(
+            child: Column(children: const [
+          HomeComponent(),
+        ])));
   }
 }
